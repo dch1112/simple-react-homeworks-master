@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: coral;
+  padding-left: 30px;
+}
+
+.dropbtn {
+  padding: 10px;
+  display: inline-block;
+  min-width: 100px;
+  min-height: 30px;
+  background-color: #cd7a17;
+  cursor: pointer;
+}

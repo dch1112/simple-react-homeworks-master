@@ -1,0 +1,11 @@
+.dateTime {
+  text-shadow: 1px 1px 2px burlywood;
+}
+
+.time {
+  color: chocolate;
+}
+
+.date {
+  color: darkorange;
+}

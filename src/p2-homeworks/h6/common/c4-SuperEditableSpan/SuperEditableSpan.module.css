@@ -1,0 +1,7 @@
+.editableSpan {
+  cursor: pointer;
+}
+
+.editableSpan:hover {
+  text-decoration: underline;
+}

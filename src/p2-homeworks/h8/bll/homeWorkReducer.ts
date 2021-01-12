@@ -1,4 +1,6 @@
-export const homeWorkReducer = (state: any, action: any): any => {
+import {ActionsType, PeopleType} from "../HW8";
+
+export const homeWorkReducer = (state: PeopleType, action: ActionsType): PeopleType => {
   switch (action.type) {
     case "sort": {
       return action.payload === 'up'
@@ -8,7 +10,7 @@ export const homeWorkReducer = (state: any, action: any): any => {
           : state
     }
     case "check": {
-      return [...state].filter(man => man.age >= action.payload)
+      return state.filter(man => man.age >= action.payload)
     }
     default:
       return state

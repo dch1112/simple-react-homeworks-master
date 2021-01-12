@@ -1,7 +1,8 @@
 import React from 'react';
 import {homeWorkReducer} from "../homeWorkReducer";
+import {PeopleType} from "../../HW8";
 
-let initialState: any[];
+let initialState: PeopleType;
 
 beforeEach(() => {
   initialState = [

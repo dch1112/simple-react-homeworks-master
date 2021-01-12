@@ -20,12 +20,12 @@ const initialPeople: PeopleType = [
 const SORT = 'sort'
 const CHECK = 'check'
 
-const sortPeople = (payload: string) => ({
+export const sortPeople = (payload: string) => ({
   type: SORT,
   payload
 } as const)
 
-const checkPeople = (payload: number) => ({
+export const checkPeople = (payload: number) => ({
   type: CHECK,
   payload
 } as const)
@@ -49,13 +49,13 @@ function HW8() {
 
 
   const sortUp = () => {
-    setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    setPeople(homeWorkReducer(initialPeople, sortPeople("up")))
   }
   const sortDown = () => {
-    setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "down"}))
+    setPeople(homeWorkReducer(initialPeople, sortPeople("down")))
   }
   const checkAge = (age: number) => {
-    setPeople(homeWorkReducer(initialPeople, {type: "check", payload: age}))
+    setPeople(homeWorkReducer(initialPeople, checkPeople(age)))
   }
 
   return (

@@ -1,15 +1,15 @@
-import {ActionsType, PeopleType} from "../HW8";
+import {ACTIONS_TYPE, ActionsType, PeopleType} from "../HW8";
 
 export const homeWorkReducer = (state: PeopleType, action: ActionsType): PeopleType => {
   switch (action.type) {
-    case "sort": {
+    case ACTIONS_TYPE.SORT: {
       return action.payload === 'up'
         ? [...state].sort((a, b) => a.name > b.name ? 1 : -1)
         : action.payload === 'down'
           ? [...state].sort((a, b) => a.name > b.name ? -1 : 1)
           : state
     }
-    case "check": {
+    case ACTIONS_TYPE.CHECK: {
       return state.filter(man => man.age >= action.payload)
     }
     default:

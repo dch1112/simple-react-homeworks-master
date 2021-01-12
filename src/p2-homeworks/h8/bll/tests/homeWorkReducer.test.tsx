@@ -28,7 +28,6 @@ test("sort name down", () => {
   expect(newState[5].name).toBe('Александр');
   expect(newState[0].name).toBe('Кот');
   expect(newState.length).toBe(6);
-
 });
 test("check age 18", () => {
   const newState = homeWorkReducer(initialState, checkPeople(18));

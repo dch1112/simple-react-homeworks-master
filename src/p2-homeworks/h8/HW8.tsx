@@ -17,20 +17,22 @@ const initialPeople: PeopleType = [
   {_id: 5, name: "Ирина", age: 55},
 ]
 
-const SORT = 'sort'
-const CHECK = 'check'
+export enum ACTIONS_TYPE {
+  SORT = 'SORT',
+  CHECK = 'CHECK'
+}
 
 export const sortPeople = (payload: string) => ({
-  type: SORT,
+  type: ACTIONS_TYPE.SORT,
   payload
 } as const)
 
 export const checkPeople = (payload: number) => ({
-  type: CHECK,
+  type: ACTIONS_TYPE.CHECK,
   payload
 } as const)
 
-export type ActionsType = ReturnType <typeof sortPeople> | ReturnType <typeof checkPeople>
+export type ActionsType = ReturnType<typeof sortPeople> | ReturnType<typeof checkPeople>
 
 function HW8() {
   const [people, setPeople] = useState<PeopleType>(initialPeople);
@@ -46,7 +48,6 @@ function HW8() {
     ))}
 
   </table>
-
 
   const sortUp = () => {
     setPeople(homeWorkReducer(initialPeople, sortPeople("up")))

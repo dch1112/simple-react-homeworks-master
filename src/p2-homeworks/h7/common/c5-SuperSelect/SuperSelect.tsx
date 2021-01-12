@@ -1,4 +1,4 @@
-import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent, FunctionComponent, ReactNode} from "react";
+import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent, ReactNode} from "react"
 import s from './SuperSelect.module.css'
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
@@ -38,7 +38,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     >
       {mappedOptions}
     </select>
-  );
+  )
 }
 
-export default SuperSelect;
+export default SuperSelect

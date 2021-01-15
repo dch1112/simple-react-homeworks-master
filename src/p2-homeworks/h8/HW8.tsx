@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
-export type PeopleType = Array<{
+export type PeopleType = {
   _id: number
   name: string
   age: number
-}>
+}
 
-const initialPeople: PeopleType = [
+const initialPeople: Array<PeopleType> = [
   {_id: 0, name: "Кот", age: 3},
   {_id: 1, name: "Александр", age: 66},
   {_id: 2, name: "Коля", age: 16},
@@ -35,7 +35,7 @@ export const checkPeople = (payload: number) => ({
 export type ActionsType = ReturnType<typeof sortPeople> | ReturnType<typeof checkPeople>
 
 function HW8() {
-  const [people, setPeople] = useState<PeopleType>(initialPeople);
+  const [people, setPeople] = useState<Array<PeopleType>>(initialPeople);
 
   const finalPeople = <table>
     <td>Name</td>

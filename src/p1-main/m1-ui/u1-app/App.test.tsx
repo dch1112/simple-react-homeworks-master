@@ -1,9 +1,14 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import App from './App';
+//
+// test('find text "react homeworks"', () => {
+//     const {getByText} = render(<App/>);
+//     const linkElement = getByText(/react homeworks/i);
+//     expect(linkElement).toBeInTheDocument();
+// });
 
-test('find text "react homeworks"', () => {
-    const {getByText} = render(<App/>);
-    const linkElement = getByText(/react homeworks/i);
-    expect(linkElement).toBeInTheDocument();
+
+test('test placeholder', () => {
+  expect(1).toBe(1);
 });

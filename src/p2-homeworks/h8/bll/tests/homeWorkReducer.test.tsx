@@ -2,7 +2,7 @@ import React from 'react';
 import {homeWorkReducer} from "../homeWorkReducer";
 import {checkPeople, PeopleType, sortPeople} from "../../HW8";
 
-let initialState: PeopleType;
+let initialState: Array<PeopleType>;
 
 beforeEach(() => {
   initialState = [

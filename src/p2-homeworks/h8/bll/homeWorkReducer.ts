@@ -1,6 +1,6 @@
 import {ACTIONS_TYPE, ActionsType, PeopleType} from "../HW8";
 
-export const homeWorkReducer = (state: PeopleType, action: ActionsType): PeopleType => {
+export const homeWorkReducer = (state: Array<PeopleType>, action: ActionsType): Array<PeopleType> => {
   switch (action.type) {
     case ACTIONS_TYPE.SORT: {
       return action.payload === 'up'

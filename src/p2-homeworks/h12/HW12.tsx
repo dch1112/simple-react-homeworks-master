@@ -5,7 +5,7 @@ import {AppStoreType} from '../h10/bll/store'
 import {changeThemeC} from './bll/themeReducer'
 import SuperSelect from '../h7/common/c5-SuperSelect/SuperSelect'
 
-const themes = ['dark', 'red', 'some']
+const themes = ['dark', 'red', 'green', 'yellow']
 
 function HW12() {
   const theme = useSelector<AppStoreType, string>(store => store.theme.theme) // useSelector

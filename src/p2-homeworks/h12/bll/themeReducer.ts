@@ -3,7 +3,7 @@ enum ACTION_TYPES {
 }
 
 const initState = {
-  theme: 'some'
+  theme: 'dark'
 }
 
 type InitStateType = typeof initState

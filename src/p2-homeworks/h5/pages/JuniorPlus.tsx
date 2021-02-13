@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import HW12 from '../../h12/HW12'
 
 interface OwnProps {}
 
@@ -7,7 +8,8 @@ type Props = OwnProps;
 const JuniorPlus: FunctionComponent<Props> = (props) => {
 
   return (<div>
-    Junior Plus Page under development ...
+    <HW12 />
+    {/*<HW13 />*/}
   </div>);
 };
 

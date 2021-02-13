@@ -1,14 +1,31 @@
+enum ACTION_TYPES {
+  SET_THEME = 'HW12/SET_THEME'
+}
+
 const initState = {
+  theme: 'some'
+}
 
-};
+type InitStateType = typeof initState
 
-export const themeReducer = (state = initState, action: any): any => { // fix any
-    switch (action.type) {
-        case "": {
-            return state;
-        }
-        default: return state;
+type ActionTypes = ChangeThemeCType
+
+export const themeReducer = (state: InitStateType = initState, action: ActionTypes): InitStateType => { // fix any
+  switch (action.type) {
+    case ACTION_TYPES.SET_THEME: {
+      return {...state, ...action.payload}
     }
-};
+    default:
+      return state
+  }
+}
 
-export const changeThemeC = (): any => {}; // fix any
+export const changeThemeC = (theme: string): ChangeThemeCType => ({
+  type:ACTION_TYPES.SET_THEME,
+  payload: {theme}
+}) // fix any
+
+type ChangeThemeCType = {
+  type:ACTION_TYPES.SET_THEME,
+  payload: {theme: string}
+}

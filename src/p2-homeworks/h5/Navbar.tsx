@@ -1,10 +1,10 @@
-import React, {FunctionComponent} from 'react';
-import s from "./Navbar.module.css";
-import {PATH} from "./Routes";
-import {NavLink} from "react-router-dom";
+import React, {FunctionComponent} from 'react'
+import s from './Navbar.module.css'
+import {PATH} from './Routes'
+import {NavLink} from 'react-router-dom'
 
 interface OwnProps {
-  onClick: ()=> void
+  onClick: () => void
 }
 
 type Props = OwnProps;
@@ -16,9 +16,11 @@ const Navbar: FunctionComponent<Props> = (props) => {
       {Object
         .keys(PATH)
         .map((category) => {
-          return <div onClick={props.onClick}>
+          return <div
+            key={category}
+            onClick={props.onClick}
+          >
             <NavLink
-              key={category}
               to={PATH[category].link}
               className={s.navItem}
               activeClassName={s.active}
@@ -27,10 +29,9 @@ const Navbar: FunctionComponent<Props> = (props) => {
             </NavLink>
           </div>
 
-
         })
       }
-    </div>);
-};
+    </div>)
+}
 
-export default Navbar;
+export default Navbar
